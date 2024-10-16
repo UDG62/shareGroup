@@ -8,11 +8,28 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class BaseController extends AbstractController
 {
-    #[Route('/base', name: 'app_base')]
+    #[Route('/', name: 'app_accueil')]
     public function index(): Response
     {
         return $this->render('base/index.html.twig', [
-            'controller_name' => 'BaseController',
+        ]);
+    }
+    #[Route('/contact', name: 'app_contact')]
+    public function contact(): Response
+    {
+        return $this->render('base/contact.html.twig', [
+        ]);
+    }
+    #[Route('/Apropos', name: 'app_a_propos')]
+    public function apropos(): Response
+    {
+        return $this->render('base/apropos.html.twig', [
+        ]);
+    }
+    #[Route('/mentions', name: 'app_mentions')]
+    public function mentions(): Response
+    {
+        return $this->render('base/mentions.html.twig', [
         ]);
     }
 }

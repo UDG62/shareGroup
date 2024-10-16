@@ -1,20 +1,16 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello BaseController!{% endblock %}
-
+{% block title %}
+	{{parent()}}Accueil
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/var/www/html/shareGroup/shareGroup/src/Controller/BaseController.php</code></li>
-        <li>Your template at <code>/var/www/html/shareGroup/shareGroup/templates/base/index.html.twig</code></li>
-    </ul>
-</div>
+	<h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold">
+		SHARE</h1>
+	<h2 class="text-center text-secondary mb-4 pb-4 display-2">
+		partagez vos fichiers
+	</h2>
+	<h2 class="text-center">
+		<i class="bi bi-cloud-arrow-up-fill text-primary"></i>
+		<i class="bi bi-folder text-secondary"></i>
+		<i class="bi bi-cloud-arrow-down-fill text-warning"></i>
+	</h2>
 {% endblock %}
