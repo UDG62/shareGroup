@@ -29,20 +29,23 @@
 						<li class="nav-item">
 							<a class="nav-link" href="{{path('app_contact')}}">Contact</a>
 						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégorie</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="{{path('app_categorie')}}">Ajout Catégorie</a>
+								<a class="dropdown-item" href="{{path('app_liste_categories')}}">Liste Catégories</a>
+							</div>
+						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="{{path('app_a_propos')}}">A Propos</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="{{path('app_mentions')}}">Mentions légales</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{path('app_categorie')}}">Ajout Catégories</a>
-						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="{{path('app_liste-contacts')}}">Liste Contacts</a>
-								<a class="dropdown-item" href="{{path('app_liste-categories')}}">Liste Catégories</a>
 								<a class="dropdown-item" href="#">Something else here</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#">Separated link</a>
