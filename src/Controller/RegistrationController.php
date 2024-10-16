@@ -23,6 +23,7 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $user->setDateInscription(new \Datetime());
             /** @var string $plainPassword */
             $plainPassword = $form->get('plainPassword')->getData();
 

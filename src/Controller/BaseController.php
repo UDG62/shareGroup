@@ -11,6 +11,7 @@ use App\Form\ContactType;
 use App\Form\CategorieType;
 use App\Entity\Contact;
 use App\Entity\Categorie;
+use App\Repository\UserRepository;
 
 
 
@@ -75,6 +76,15 @@ class BaseController extends AbstractController
             }
         return $this->render('base/categorie.html.twig', [
             'form' => $form->createView()
+        ]);
+    }
+
+    #[Route('/profil', name: 'app_profil')]
+    public function profil(UserRepository $UserRepository): Response
+    {
+        $comptes = $UserRepository->findAll();
+        return $this->render('base/profil.html.twig', [
+            'user' => $comptes,
         ]);
     }
 }

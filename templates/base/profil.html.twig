@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{parent()}}Profil
+{% endblock %}
+{% block body %}
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-10 text-primary">
+				<h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold">
+					PROFIL</h1>
+				<table class="table table-hover">
+					<tbody>
+						<tr>
+							<td class="text-center">{{app.user.email | lower}}</td>
+						</tr>
+						<tr>
+							<td class="text-center">{{app.user.nom | upper}}</td>
+						</tr>
+						<tr>
+							<td class="text-center">{{app.user.prenom | capitalize}}</td>
+						</tr>
+						<tr>
+							<td class="text-center">{{app.user.dateInscription | date("d-m-Y à H:i:s")}}</td>
+						</tr>
+						<tr class="text-center">
+							{% if "ROLE_ADMIN" in app.user.roles %}
+								<td>Administrateur</td>
+							{% elseif "ROLE_MOD" in app.user.roles %}
+								<td>Modérateur</td>
+							{% else %}
+								<td>Utilisateur</td>
+							{% endif %}
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}
