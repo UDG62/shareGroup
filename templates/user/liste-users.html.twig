@@ -20,7 +20,7 @@
 						<tbody>
 							{% for user in users |sort((a, b) => b.dateInscription <=> a.dateInscription) %}
 								<tr class="{{ cycle(['table-primary', 'table-secondary'], loop.index0) }}">
-                                <td>{{ user.email |capitalize }}</td>
+                                	<td>{{ user.email |capitalize }}</td>
 									<td>{{ user.dateInscription | date("d-m-Y à H:i:s") }}</td>
                                     {% if "ROLE_ADMIN" in user.roles %}
 									<td>Administrateur</td>

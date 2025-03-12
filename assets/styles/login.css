@@ -1,0 +1,27 @@
+.captcha-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+.captcha-question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.captcha-color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.captcha-color {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.3s;
+}
+.captcha-color:hover {
+    transform: scale(1.1);
+}
+#captchaResult {
+    margin-top: 10px;
+    font-size: 16px;
+}
